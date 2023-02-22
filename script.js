@@ -1,4 +1,23 @@
 
+// Function to convert each letter of a string to uppercase letter.
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+capitalizeFirstLetter('string');
+
+
+
+
+
+function saveSearchHistory() {
+    localStorage.setItem('search history', JSON.stringify(searchHistoryArray));
+};
+
+
+
+
 // Logic for retrieving data from API.
 
 fetch("https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=9912a871379b3e7285fcdbca65faf901")
@@ -17,6 +36,7 @@ fetch("https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=9912
 
         console.log(data);
     })
+
 
 
   

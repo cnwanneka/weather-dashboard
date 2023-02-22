@@ -5,3 +5,15 @@
     background-color: #6699ff;
     color: white;
 }
+
+.btn {
+    font-size: 2rem;
+    width: 100%;
+    background-color: lightgrey;
+    color: black;
+    border: none;
+    border-radius: .4rem;
+    margin-top: 2rem;
+    padding: .7rem 0;
+}
+
