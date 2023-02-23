@@ -1,4 +1,16 @@
 
+let apiKey = "9912a871379b3e7285fcdbca65faf901"
+
+
+
+
+
+
+
+
+
+
+
 // Function to convert each letter of a string to uppercase letter.
 
 function capitalizeFirstLetter(string) {
