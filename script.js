@@ -1,8 +1,9 @@
 
 let apiKey = "9912a871379b3e7285fcdbca65faf901"
 
+// Array of cities
 
-
+let cities = ["Berlin", "Paris", "Edinburgh", "Madrid", "Birmungham", "London"];
 
 
 
