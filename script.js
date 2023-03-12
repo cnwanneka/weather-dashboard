@@ -78,7 +78,7 @@ let getForecast = function (lat, lon) {
         let temp = response.daily[i].temp.day + " \u00B0C";
         $("#tempDay" + i).html(temp);
       
-        let wind = response.daily[i].wind
+        let wind = response.daily[i].wind_speed;
         $("#windDay" + i).html(wind + " KPH")
 
         let humidity = response.daily[i].humidity;
