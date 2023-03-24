@@ -8,6 +8,8 @@ This application shows the current weather forecast of a given city and also the
 
 When a user types in a city name, they are able to see the city name, date, an icon representation of weather conditions, the temperature, humidity and the wind speed.
 
+The user is also able to see the weather conditions of the next five days for that city.
+
 It was interesting having to design this application. I had some difficulties while designing the application and I got some guidance from the teaching assistants.
 
 
