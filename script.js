@@ -5,8 +5,6 @@ let searchHistory = [];
 
 let numberOfCities = 6;
 
-//let button = document.querySelector("#search-button");
-
 let searchForm = $("#searchForm");
 
 let unit = "units=metric";
@@ -14,7 +12,6 @@ let unit = "units=metric";
 let dailyWeatherApi = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 let forecastWeatherApi = "https://api.openweathermap.org/data/3.0/onecall?";
-
 
 let searchedCities = $("#history");
 
@@ -88,7 +85,6 @@ let getForecast = function (lat, lon) {
 };
 
 // creating buttons for history items
-
 let createBtn = function (btnText) {
   let btn = $("<button>")
     .text(btnText)
@@ -109,11 +105,7 @@ let loadSavedCity = function () {
   }
 };
   
-
-
-    
 // save search in local storage
-
 let saveCityName = function (searchInputName) {
   let newcity = 0;
   searchHistory = JSON.parse(localStorage.getItem("weatherInfo"));
@@ -143,7 +135,6 @@ let saveCityName = function (searchInputName) {
     
     
 // create buttons with searched cities
-
 let createCityNameBtn = function (searchInputName) {
   let saveCities = JSON.parse(localStorage.getItem("weatherInfo"));
   
@@ -173,37 +164,7 @@ let createCityNameBtn = function (searchInputName) {
 // Function to load saved cities
 loadSavedCity();
 
-// event handler for form submission
-//function handleFormSubmit(event) {
-  //event.preventDefault();
-  
 
-  // inputting city name
-  //let searchInputName = $("#searchInput").val().trim();
-  //let newcity = saveCityName(searchInputName);
-  //getCityWeather(searchInputName);
-  //if (newcity == 1) {
-    //createCityNameBtn(searchInputName);
- // }
-//};
-
-
-//let BtnClickHandler = function (event) {
-  //event.preventDefault();
-
-  // inputting city name
-  //let searchInputName = event.target.textContent.trim();
-  //getCityWeather(searchInputName);
-//};
-
-
-//$("#button.list-group-item-action").on('click', function () {
-//  BtnClickHandler(Event);
-//});
-
-
-// logic for calling functions when submit button is clicked
-// called when the search form is submitted
 $("#searchForm").on("submit", function() {
   event.preventDefault();
   
@@ -224,12 +185,13 @@ $("#searchForm").on("submit", function() {
 
 // called when a search history entry is clicked
 $("#button.list-group-item-action").on("click", "p", function() {
+  
   // get text (city name) of entry and pass it as a parameter to display weather conditions
   let previousCityName = $(this).text();
   getCityWeather(previousCityName);
   getForecast(previousCityName);
 
-  //
+  
   let previousCityClicked = $(this);
   previousCityClicked.remove();
 });
