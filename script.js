@@ -164,34 +164,29 @@ let createCityNameBtn = function (searchInputName) {
 // Function to load saved cities
 loadSavedCity();
 
-
-$("#searchForm").on("submit", function() {
+// submit form event handler
+let formSubmitHandler = function (Event) {
   event.preventDefault();
-  
-  // get name of city searched
-  let cityName = $("#searchInput").val();
-
-  if (cityName === "" || cityName == null) {
-      
-    // alert if field is empty
-      alert("Please enter name of city.");
-      event.preventDefault();
-  } else {
-      // if cityName is valid, add it to search history list and display its weather conditions
-      getCityWeather(cityName);
-      getForecast(cityName);
+  // city name
+  let cityName = $("#searchInput").val().trim();
+  let newcity = saveCityName(cityName);
+  getCityWeather(cityName);
+  if (newcity == 1) {
+    createCityNameBtn(cityName);
   }
+};
+
+let BtnClickHandler = function (Event) {
+  event.preventDefault();
+  // city name
+  let cityName = event.target.textContent.trim();
+  getCityWeather(cityName);
+};
+
+// call functions using submit button
+$("#searchForm").on("submit", function () {
+  formSubmitHandler(Event);
 });
-
-// called when a search history entry is clicked
-$("#button.list-group-item-action").on("click", "p", function() {
-  
-  // get text (city name) of entry and pass it as a parameter to display weather conditions
-  let previousCityName = $(this).text();
-  getCityWeather(previousCityName);
-  getForecast(previousCityName);
-
-  
-  let previousCityClicked = $(this);
-  previousCityClicked.remove();
+$(":button.list-group-item-action").on("click", function () {
+  BtnClickHandler(Event);
 });
