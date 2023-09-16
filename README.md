@@ -4,7 +4,7 @@ https://cnwanneka.github.io/weather-dashboard/
 
 Description:
 
-This application shows the current weather forecast of a given city and also the 5 day weather forecast of the same city.
+This application shows the current weather forecast of a given city and also the 5-day weather forecast of the same city.
 
 When a user types in a city name in the search bar, they are able to see the city name, date, an icon representation of weather conditions, the temperature, humidity and the wind speed for that location.
 
