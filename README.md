@@ -8,7 +8,7 @@ When a user types in a city name in the search bar, they are able to see the cit
 
 The user is also able to see the weather conditions over the next five days for that city.
 
-It was challenging and interesting having to design this application. I had some difficulties while designing the application and I got some tips and guidance from the teaching assistants.
+It was challenging and interesting having to design this application. I had some difficulties while designing the application and I got some tips and guidance from the teaching assistants. This helped me with a solution.
 
 URL of the application: https://cnwanneka.github.io/weather-dashboard/
 
